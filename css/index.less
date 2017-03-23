@@ -47,45 +47,64 @@ body {
     height: 70px;
     line-height: 70px;
     font-size: 32px;
-    ul {
-      display: table;
-      li {
-        position: relative;
-        width: 20%;
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-        a {
-          color: #fff;
-          text-decoration: none;
-          display: block;
-        }
-        a.home {
-          position: absolute;
-          width: 100px;
-          height: 100px;
-          left: 50%;
-          margin-left: -54px;
-          border-radius: 50%;
-          border: 4px solid #fff;
-          overflow: hidden;
-          text-indent: -120%;
-          background: url(imgs/logo.jpg);
-          -webkit-background-size: 100px 100px;
-          background-size: 100px 100px;
-          padding: 0 !important;
-          top: 26px;
-        }
+    display: table;
+    table-layout: fixed;
+    li {
+      position: relative;
+      width: 20%;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+      }
+      a.home {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 50%;
+        margin-left: -54px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        overflow: hidden;
+        text-indent: -120%;
+        background: url(imgs/logo.jpg);
+        -webkit-background-size: 100px 100px;
+        background-size: 100px 100px;
+        padding: 0 !important;
+        top: 26px;
       }
     }
   }
 }
 
-.swiper-home {
-  background: #000;
+.swiper-slide {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.page-home {
+   background-image: url(imgs/1.jpg);
   .swiper-content {
     color: #fff;
     font-size: 32px;
     line-height: 1.5;
   }
+}
+.page-about {
+  background-image: url(imgs/2.jpg);
+}
+.page-work {
+  background-image: url(imgs/3.jpg);
+}
+.page-skill {
+  background-image: url(imgs/4.jpg);
+}
+.page-contact {
+  background-image: url(imgs/5.jpg);
 }

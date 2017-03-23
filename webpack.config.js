@@ -17,7 +17,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         //publicPath: '/build/',
-        filename: './js/[name].js'
+        filename: './js/[hash:8].js'
     },
 
     // 使用loader模块
