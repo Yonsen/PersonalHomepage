@@ -7,6 +7,7 @@ var Clipboard = require(__dirname + '/lib/clipboard.min.js');
 var Util = require(__dirname + '/js/util.js');
 var app = {
     init: function () {
+        $(".loading-process").remove();
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             direction: 'vertical',
@@ -15,5 +16,5 @@ var app = {
             spaceBetween: 30,
             mousewheelControl: true
         });
-    },
+    }
 }.init();

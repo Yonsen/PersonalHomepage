@@ -8,8 +8,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: './src/index.js'/*, // 入口文件
-        vendors: ['./lib/jquery-1.7.2.min.js', './lib/swiper.min.js']*/
+        index: './src/index.js', // 入口文件
+        vendors: ['jquery', 'swiper', 'clipboard']
     },
     // 输出文件 build下的bundle.js
     output: {
@@ -36,18 +36,19 @@ module.exports = {
         // new webpack.IgnorePlugin(/\.\/jquery-1.7.2.min.js$/),
         // new webpack.IgnorePlugin(/\.\/swiper.min.js$/),
         // new ExtractTextPlugin('./css/common.css'),
-        //把入口文件里面的数组打包成vendors.js
-        //new webpack.optimize.CommonsChunkPlugin({name: 'vendors', filename: 'vendors.bundle.js'}),
+        // 把入口文件里面的数组打包成vendors.js
+        new webpack.optimize.CommonsChunkPlugin({name: 'vendors', filename: 'js/vendors.bundle.js'}),
         /*new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
             }
         }),*/
-        /*new webpack.ProvidePlugin({
+        new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",
-            "window.Clipboard": "clipboard"
-        }),*/
+            Swiper: "swiper",
+            Clipboard: "clipboard"
+        }),
         new HtmlWebpackPlugin({
             /*minify: {
                 removeAttributeQuotes: true,
