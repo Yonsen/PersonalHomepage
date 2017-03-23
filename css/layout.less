@@ -1,0 +1,138 @@
+@import "normalize.less";
+@import "animate.css";
+@import "swiper.css";
+
+@OstrichSansBold: 'OstrichSans-Bold';
+@OstrichSansInlineRegular: 'OstrichSansInline-Regular';
+/*@SourceHanSansCNExtraLight: 'SourceHanSansCNExtraLight';
+@SourceHanSansCNHeavy: 'SourceHanSansCNHeavy';
+@SourceHanSansCNLight: 'SourceHanSansCNLight';
+@SourceHanSansCNMedium: 'SourceHanSansCNMedium';
+@SourceHanSansCNNormal: 'SourceHanSansCNNormal';*/
+
+@font-face {
+  font-family: @OstrichSansBold;
+  src: url(fonts/OstrichSans-Bold.otf) format('opentype');
+}
+@font-face {
+  font-family: @OstrichSansInlineRegular;
+  src: url(fonts/OstrichSansInline-Regular.otf) format('opentype');
+}
+
+/*@font-face {
+  font-family: @SourceHanSansCNBold, @SourceHanSansCNExtraLight, @SourceHanSansCNHeavy, @SourceHanSansCNLight, @SourceHanSansCNMedium, @SourceHanSansCNNormal, @SourceHanSansCNRegular;
+  src: url(fonts/SourceHanSansCN-Bold.otf) format('opentype'),
+  url(fonts/SourceHanSansCN-ExtraLight.otf) format('opentype'),
+  url(fonts/SourceHanSansCN-Heavy.otf) format('opentype'),
+  url(fonts/SourceHanSansCN-Light.otf) format('opentype'),
+  url(fonts/SourceHanSansCN-Medium.otf) format('opentype'),
+  url(fonts/SourceHanSansCN-Normal.otf) format('opentype'),
+url(fonts/SourceHanSansCN-Regular.otf) format('opentype');
+}*/
+
+html {
+  height: 100%;
+}
+
+body {
+  color: #333;
+  font-size: 0.875em;
+  min-height: 100%;
+  font-family: @OstrichSansBold;
+}
+
+.light {
+  color: #ff7800;
+}
+.clearfix:before,.clearfix:after {
+  content: "";
+  display: table
+}
+
+.clearfix:after {
+  clear: both
+}
+
+.clearfix {
+  *zoom:1
+}
+
+.btn {
+  color: #fff;
+  font-size: 16px;
+  line-height: 34px;
+  height: 34px;
+  margin: 0;
+  padding: 0 10px;
+  background: #ff7800;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+
+.btn, .btn:visited, .btn:active {
+  background: #ff7800;
+  display: inline-block;
+}
+
+.btn.dis {
+  color: #fff;
+  background: #ccc;
+}
+
+.btn-primary:active {
+  background: #ff7800;
+}
+
+.btn-default {
+  color: #666;
+  background: #fbfbfb;
+  border: 1px solid #ccd5df;
+}
+
+.btn-default:active{
+  color: #666;
+  background: #ebebeb;
+}
+
+.layout {
+  width: 75%;
+  min-width: 990px;
+  margin: 0 auto;
+}
+
+.loading-round {
+  position: relative;
+  height: 140px;
+  width: 140px;
+  .loading-ring {
+    position:absolute;
+    top: 19px;
+    left: 19px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid #C2C2C2;
+    border-radius: 50%;
+    animation : loadingRound 2s infinite;
+    -webkit-animation : loadingRound 2s infinite;
+    .loading-dot {
+      position: absolute;
+      top: -5px;
+      left: 46px;
+      height: 10px;
+      width: 10px;
+      background-color: #C2C2C2;
+      border-radius: 50%;
+    }
+  }
+}
+@keyframes loadingRound {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes loadingRound {
+  0% {-webkit-transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(360deg);}
+}
