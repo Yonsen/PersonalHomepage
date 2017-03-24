@@ -40,7 +40,8 @@ body {
 .light {
   color: #ff7800;
 }
-.clearfix:before,.clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: "";
   display: table
 }
@@ -111,7 +112,6 @@ body {
     border: 1px solid #C2C2C2;
     border-radius: 50%;
     animation : loadingRound 2s infinite;
-    -webkit-animation : loadingRound 2s infinite;
     .loading-dot {
       position: absolute;
       top: -5px;
@@ -126,9 +126,4 @@ body {
 @keyframes loadingRound {
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
-}
-
-@-webkit-keyframes loadingRound {
-  0% {-webkit-transform: rotate(0deg);}
-  100% {-webkit-transform: rotate(360deg);}
 }

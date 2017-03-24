@@ -2,14 +2,15 @@
  * Created by wu on 2017/2/21.
  */
 const path = require('path'); // 导入路径包
-const webpack = require('webpack')
+const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 //const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // 引入css 单独打包插件
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // 设置生成css 的路径和文件名，会自动将对应entry入口js文件中引入的CSS抽出成单独的文件
-var extractCSS = new ExtractTextPlugin('static/css/[contenthash:8].css');
-var extractLESS = new ExtractTextPlugin('static/css/[contenthash:8].css');
+const extractCSS = new ExtractTextPlugin('static/css/[contenthash:8].css');
+const extractLESS = new ExtractTextPlugin('static/css/[contenthash:8].css');
 
 module.exports = {
     entry: {
@@ -28,8 +29,8 @@ module.exports = {
         loaders: [
             {test: /\.js$/, loader: 'babel-loader'},
             {test: /\.css$/, loader: extractCSS.extract(['css-loader'])/*'style-loader!css-loader'*/},
-            {test: /\.less$/, loader: extractLESS.extract(['css-loader', 'less-loader'])/*'style-loader!css-loader!less-loader'*/},
-            {test: /\.hbs$/, loader: "handlebars-loader"},
+            {test: /\.less$/, loader: extractLESS.extract(['css-loader', 'postcss-loader', 'less-loader'])/*'style-loader!css-loader!less-loader'*/},
+            {test: /\.hbs$/, loader: 'handlebars-loader'},
             {test: /\.html$/, loader: 'html-withimg-loader'},
             {test: /\.(jpg|png|gif)$/, loader: 'url-loader?limit=8192&name=static/images/[hash:8].[ext]'},
             {test: /\.(otf|woff|woff2|eot|ttf)$/i, loader: 'file-loader?limit=8192&name=static/fonts/[hash:8].[ext]'}
