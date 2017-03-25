@@ -114,6 +114,44 @@
             }
         }
     </style>
+    <style>
+        #container {
+            position:absolute;
+            width:600px;height:600px;
+            transform-style:preserve-3d;
+            perspective:1200px;
+        }
+        #translation {
+            transform-style:preserve-3d;
+            transform:translate3d(300px,300px,400px);
+        }
+        #ball {
+            position:absolute;
+            left:0px;top:0px;
+            transform-style:preserve-3d;
+            width:0px;height:0px;
+            -webkit-animation:rot 14s linear infinite;
+            animation:rot 14s linear infinite;
+        }
+        #ball>a {
+            position:absolute;left:0px;top:0px;
+            width:30px;height:30px;margin:-15px;
+            border-radius:100%;
+            text-align:center;
+            line-height:30px;
+            font-weight:bold;
+            color:yellow;
+            background:rgba(160,160,64,0.7);
+        }
+        #ball>a:hover {background:red;}
+        #ball:hover {
+            -webkit-animation-play-state:paused;
+            -moz-animation-play-state:paused;
+            animation-play-state:paused;
+        }
+        @-webkit-keyframes rot {to{transform:rotateY(360deg);}}
+        @keyframes rot {to{transform:rotateY(360deg);}}
+    </style>
 </head>
 <body>
 <!-- http://www.haorooms.com/about -->
@@ -151,8 +189,43 @@
     <div class="swiper-wrapper">
         <div class="swiper-slide page-home">
             <div class="swiper-content">
-                <div class="animated fadeInLeftBig">嗨，我是 xxx</div>
-                <div class="animated fadeInRightBig">欢迎光临我的xx！</div>
+                <!--<div class="animated fadeInLeftBig">嗨，我是 xxx</div>
+                <div class="animated fadeInRightBig">欢迎光临我的xx！</div>-->
+                <ul class="timeline">
+                    <li class="item">
+                        <div class="caption animated fadeInLeftBig">2017-03-25</div>
+                        <div class="line"></div>
+                        <div class="section animated fadeInRightBig">
+                            <p>在集体探讨下</p>
+                            <p>发现目前的HTML5 CSS3 发展历程已经不能满足需求发展历程已经不能满足需求发展历程已经不能满足需求</p>
+                            <p>集体讨论</p>
+                            <p>这时候</p>
+                            <p>韩老师之前的设计稿被端上了会议桌</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="caption animated fadeInLeftBig">2017-03-25</div>
+                        <div class="line"></div>
+                        <div class="section animated fadeInRightBig">
+                            <p>在集体探讨下</p>
+                            <p>发现目前的HTML5 CSS3 发展历程已经不能满足需求</p>
+                            <p>集体讨论</p>
+                            <p>这时候</p>
+                            <p>韩老师之前的设计稿被端上了会议桌</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="caption animated fadeInLeftBig">2017-03-25</div>
+                        <div class="line"></div>
+                        <div class="section animated fadeInRightBig">
+                            <p>在集体探讨下</p>
+                            <p>发现目前的HTML5 CSS3 发展历程已经不能满足需求</p>
+                            <p>集体讨论</p>
+                            <p>这时候</p>
+                            <p>韩老师之前的设计稿被端上了会议桌</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="swiper-slide">
@@ -168,8 +241,20 @@
         <div class="swiper-slide page-work">Slide 4</div>
         <div class="swiper-slide page-skill">Slide 5</div>
         <div class="swiper-slide page-contact">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">
+            <div id="container">
+                <div id="translation">
+                    <div id="ball"></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="tag-cloud">
+                <div class="scene">
+                    <div class="ball"></div>
+                </div>
+            </div>
+        </div>
         <div class="swiper-slide">Slide 9</div>
         <div class="swiper-slide">Slide 10</div>
     </div>
