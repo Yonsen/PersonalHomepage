@@ -12,8 +12,10 @@ var app = {
             direction: 'vertical',
             slidesPerView: 1,
             paginationClickable: true,
-            spaceBetween: 30,
-            mousewheelControl: true
+            spaceBetween: 0,
+            mousewheelControl: true,
+            hashnav: true,
+            hashnavWatchState: true
         });
 
         this.tagCloud();

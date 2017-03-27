@@ -1,11 +1,19 @@
+@OstrichSansBlack: 'OstrichSans-Black';
 @OstrichSansBold: 'OstrichSans-Bold';
 @OstrichSansInlineRegular: 'OstrichSansInline-Regular';
+@OstrichSansMedium: 'OstrichSans-Medium';
 /*@SourceHanSansCNExtraLight: 'SourceHanSansCNExtraLight';
 @SourceHanSansCNHeavy: 'SourceHanSansCNHeavy';
 @SourceHanSansCNLight: 'SourceHanSansCNLight';
 @SourceHanSansCNMedium: 'SourceHanSansCNMedium';
 @SourceHanSansCNNormal: 'SourceHanSansCNNormal';*/
+@fontFamilyOne: 'fontFamilyOne';
+@fontFamilyTwo: 'fontFamilyTwo';
 
+@font-face {
+  font-family: @OstrichSansBlack;
+  src: url(fonts/OstrichSans-Black.otf) format('opentype');
+}
 @font-face {
   font-family: @OstrichSansBold;
   src: url(fonts/OstrichSans-Bold.otf) format('opentype');
@@ -13,6 +21,18 @@
 @font-face {
   font-family: @OstrichSansInlineRegular;
   src: url(fonts/OstrichSansInline-Regular.otf) format('opentype');
+}
+@font-face {
+  font-family: @OstrichSansMedium;
+  src: url(fonts/OstrichSans-Medium.otf) format('opentype');
+}
+@font-face {
+  font-family: @fontFamilyOne;
+  src: url(fonts/陈继世-硬笔行书130106.TTF) format('truetype');
+}
+@font-face {
+  font-family: @fontFamilyTwo;
+  src: url(fonts/迷你简硬笔行书.TTF) format('truetype');
 }
 
 /*@font-face {
@@ -34,7 +54,7 @@ body {
   color: #333;
   font-size: 0.875em;
   min-height: 100%;
-  font-family: @OstrichSansBold;
+  font-family: @OstrichSansMedium;
 }
 
 .light {

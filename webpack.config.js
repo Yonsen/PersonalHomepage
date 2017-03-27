@@ -45,7 +45,7 @@ module.exports = {
         // new webpack.IgnorePlugin(/\.\/swiper.min.js$/),
         // new ExtractTextPlugin('[name].css'),
         // 把入口文件里面的数组打包成vendors.js
-        new webpack.optimize.CommonsChunkPlugin({name: 'vendors', filename: 'static/js/vendor.js'}),
+        new webpack.optimize.CommonsChunkPlugin({name: 'vendors', filename: 'static/js/common.js'}),
         /*new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
